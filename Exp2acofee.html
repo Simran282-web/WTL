@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #6f4e37;
+            color: white;
+            padding: 20px;
+        }
+
+        header img {
+            width: 100px; /* Increased width */
+            vertical-align: middle;
+        }
+
+        header h1 {
+            display: inline;
+            margin-left: 10px;
+            font-size: 2.5em;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        table {
+            width: 50%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #6f4e37;
+            color: white;
+        }
+
+        img {
+            max-width: 100px;
+        }
+
+        select, input[type="submit"] {
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #6f4e37;
+            background-color: #e7dac7;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            background-color: #6f4e37;
+            color: white;
+        }
+
+        section {
+            margin: 40px 0;
+        }
+
+        .featured-coffee img {
+            max-width: 300px;
+            margin-top: 20px;
+        }
+
+        .reviews {
+            background-color: #e7dac7;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .reviews h3 {
+            margin-top: 0;
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form input[type="submit"] {
+            width: auto;
+            background-color: #6f4e37;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #6f4e37;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://www.shutterstock.com/image-vector/coffee-logo-design-vector-template-600nw-2255172353.jpg" alt="Coffee Cup">
+        <h1>Coffee Cravings</h1>
+    </header>
+    
+    <main>
+        <!-- Coffee Selection Section -->
+        <h2>Select Your Coffee Type</h2>
+        <form action="#" method="post">
+            <label for="coffeeType">Choose a coffee type:</label>
+            <select id="coffeeType" name="coffeeType">
+                <option value="espresso">Espresso</option>
+                <option value="cappuccino">Cappuccino</option>
+                <option value="latte">Latte</option>
+                <option value="americano">Americano</option>
+            </select>
+            <br>
+            <input type="submit" value="Check Rate">
+        </form>
+
+        <table>
+            <tr>
+                <th>Coffee Type</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+            <tr>
+                <td>Espresso</td>
+                <td>A strong and bold coffee, served in a small cup.</td>
+                <td>₹250</td>
+                <td><img src="https://www.tasteofhome.com/wp-content/uploads/2023/03/TOH-espresso-GettyImages-1291298315-JVcrop.jpg" alt="Espresso"></td>
+            </tr>
+            <tr>
+                <td>Cappuccino</td>
+                <td>A rich and creamy coffee with steamed milk foam.</td>
+                <td>₹300</td>
+                <td><img src="https://media.istockphoto.com/id/505168330/photo/cup-of-cafe-latte-with-coffee-beans-and-cinnamon-sticks.jpg?s=612x612&w=0&k=20&c=h7v8kAfWOpRapv6hrDwmmB54DqrGQWxlhP_mTeqTQPA=" alt="Cappuccino"></td>
+            </tr>
+            <tr>
+                <td>Latte</td>
+                <td>A smooth coffee with steamed milk and a touch of foam.</td>
+                <td>₹350</td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrc2tPztEd3gDD0g_tw2hoFgQzY6oclHt3FQ&s" alt="Latte"></td>
+            </tr>
+            <tr>
+                <td>Americano</td>
+                <td>A simple and classic coffee, made by adding hot water to espresso.</td>
+                <td>₹280</td>
+                <td><img src="https://img.freepik.com/free-vector/realistic-cup-black-brewed-coffee-saucer-vector-illustration_1284-66002.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1723161600&semt=ais_hybrid" alt="Americano"></td>
+            </tr>
+        </table>
+
+        <!-- Featured Coffee of the Day -->
+        <section class="featured-coffee">
+            <h2>Featured Coffee of the Day</h2>
+            <p><strong>Mocha Latte</strong> - A delicious blend of espresso, steamed milk, and chocolate.</p>
+            <img src="https://www.spoonfulofflavor.com/wp-content/uploads/2021/11/mocha-latte-recipe.jpg" alt="Mocha Latte">
+            <p>Price: ₹400</p>
+        </section>
+
+        <!-- Customer Reviews -->
+        <section class="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <h3>Jane Doe</h3>
+                <p>"The best coffee in town! I can't start my day without a cup from Coffee Cravings."</p>
+            </div>
+            <div class="review">
+                <h3>John Smith</h3>
+                <p>"Love the variety and the cozy atmosphere. The Mocha Latte is a must-try!"</p>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Coffee Cravings. All rights reserved.</p>
+        <p>123 Coffee Lane, Brewtown, USA | Phone: (555) 123-4567</p>
+    </footer>
+</body>
+</html>  
+
+
+
+
+

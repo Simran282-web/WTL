@@ -1,0 +1,20 @@
+<html>
+<head>
+</head>
+<body>
+    <center>
+        <input type="button" value="Change Colour" onClick="fun1()" />
+    </center>
+    <script>
+        var i = 0;
+        function fun1() {
+
+            var color = ['green', 'yellow', 'black', 'silver',];
+            document.bgColor = color[i];
+            i++;
+            if (i == color.length)
+                i = 0;
+        }
+    </script>
+</body>
+<html>

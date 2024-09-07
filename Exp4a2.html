@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Image</title>
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            height: 100vh;
+            transition: background-image 0.5s ease-in-out; /* Smooth transition */
+        }
+
+        #imageButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 10; /* Ensure button is on top */
+        }
+    </style>
+</head>
+
+<body>
+    <button id="imageButton">Change Background Image</button>
+    <script>
+        // Array of image URLs
+        var images = [
+            "https://www.creativefabrica.com/wp-content/uploads/2023/04/02/Nature-Background-Graphics-66003049-1.jpg",
+            "https://img.lovepik.com/photo/48013/0603.jpg_wh860.jpg"
+        ];
+
+        // Index to keep track of the current image
+        var currentIndex = 0;
+
+        // Function to change the background image
+        function changeBackgroundImage() {
+            document.body.style.backgroundImage = "url('" + images[currentIndex] + "')";
+            currentIndex = (currentIndex + 1) % images.length; // Move to the next image, loop back to the start
+        }
+
+        // Add click event listener to the button
+        document.getElementById("imageButton").addEventListener("click", changeBackgroundImage);
+
+        // Set the initial background image
+        changeBackgroundImage();
+    </script>
+</body>
+
+</html>

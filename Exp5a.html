@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Operations</title>
+</head>
+<body>
+    <table id="myTable" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be appended here -->
+        </tbody>
+    </table>
+    <button onclick="addRow()">Add Row</button>
+
+    <script>
+        function addRow() {
+            // Log message to indicate the function is being called
+            console.log("addRow function called");
+
+            // Get the table element by ID
+            var table = document.getElementById("myTable");
+
+            // Check if table element is found
+            if (!table) {
+                console.error("Table element not found");
+                return;
+            }
+
+            // Insert a new row at the end of the table body
+            var newRow = table.insertRow();
+
+            // Create new cells for the row
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+
+            // Set text content for each cell
+            cell1.textContent = "John Doe";
+            cell2.textContent = "25";
+            cell3.textContent = "New York";
+        }
+    </script>
+</body>
+</html>

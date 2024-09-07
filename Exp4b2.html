@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Change Colors</title>
+    <style>
+        h1 {
+            transition: color 0.5s, background-color 0.5s;
+            /* Smooth transition */
+        }
+    </style>
+</head>
+
+<body>
+    <select id="fontColor">
+        <option value="">Select Font Color</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+    </select>
+    <select id="bgColor">
+        <option value="">Select Background Color</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+    </select>
+    <h1 id="heading">Change my colors!</h1>
+    <script>
+        // Function to apply selected colors
+        function applyColors() {
+            var fontColor = document.getElementById('fontColor').value;
+            var bgColor = document.getElementById('bgColor').value;
+            var heading = document.getElementById('heading');
+            if (fontColor === bgColor) {
+                return; // No changes if colors are the same
+            }
+            heading.style.color = fontColor;
+            heading.style.backgroundColor = bgColor;
+        }
+        // Event listeners for dropdowns
+        document.getElementById('fontColor').addEventListener('change', applyColors);
+        document.getElementById('bgColor').addEventListener('change', applyColors); </script>
+</body>
+
+</html>

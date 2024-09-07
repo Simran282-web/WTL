@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <style>
+        body {
+            background-image: url("https://images.pexels.com/photos/414660/pexels-photo-414660.jpeg?cs=srgb&dl=pexels-pixabay-414660.jpg&fm=jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 10px;
+        }
+        h1 {
+            color: purple;
+            text-align: center;
+            font-size: 24px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-container input {
+            padding: 8px;
+            font-size: 14px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 250px;
+        }
+        .flower-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            justify-items: center;
+        }
+        .flower-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            font-size: 14px;
+            width: 100%; /* Make cards responsive to container */
+            max-width: 150px; /* Set max width for cards */
+        }
+        .flower-card:hover {
+            transform: scale(1.03);
+        }
+        .flower-card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .flower-name {
+            color: #4b0082;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+        .stock, .price {
+            color: #228b22;
+            margin: 4px 0;
+        }
+        .price {
+            font-weight: bold;
+            color: #ff4500;
+        }
+        .order-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 6px 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-size: 12px;
+        }
+        .order-button:hover {
+            background-color: #45a049;
+        }
+        /* Increase margin to shift the second row further to the right */
+        .flower-container > div:nth-child(6),
+        .flower-container > div:nth-child(7),
+        .flower-container > div:nth-child(8),
+        .flower-container > div:nth-child(9) {
+            margin-left: 20px; /* Increased margin to shift images further right */
+        }
+    </style>
+</head>
+<body>
+    <h1>Flower Shop</h1>
+    <div class="search-container">
+        <input type="text" placeholder="Search flowers...">
+    </div>
+    <div class="flower-container">
+        <div class="flower-card">
+            <img src="https://img.freepik.com/free-photo/beautiful-rose-nature_23-2150737303.jpg" alt="Rose">
+            <p class="flower-name">Rose</p>
+            <p class="stock">In stock: 50</p>
+            <p class="price">₹150</p>
+            <button class="order-button">Order Now</button>
+        </div>
+        <div class="flower-card">
+            <img src="https://cdn.accentuate.io/559090204840/1651765103900/Tulip-Single-Rounded-299x315.jpeg?v=0" alt="Tulip">
+            <p class="flower-name">Tulip</p>
+            <p class="stock">In stock: 75</p>
+            <p class="price">₹200</p>
+            <button class="order-button">Order Now</button>
+        </div>
+        <div class="flower-card">
+            <img src="https://assets.winni.in/c_limit,dpr_1,fl_progressive,q_80,w_1000/89618_shining-sunflower-bouquet.jpeg" alt="Sunflower">
+            <p class="flower-name">Sunflower</p>
+            <p class="stock">In stock: 30</p>
+            <p class="price">₹180</p>
+            <button class="order-button">Order Now</button>
+        </div>
+        <div class="flower-card">
+            <img src="https://assets.flowersnfruits.com/uploads/product-pics/1687355525_12853.png" alt="Lily">
+            <p class="flower-name">Lily</p>
+            <p class="stock">In stock: 40</p>
+            <p class="price">₹220</p>
+            <button class="order-button">Order Now</button>
+        </div>
+        <div class="flower-card">
+            <img src="https://assets.flowersnfruits.com/uploads/product-pics/1632978164_10.jpg" alt="Orchid">
+            <p class="flower-name">Orchid</p>
+            <p class="stock">In stock: 25</p>
+            <p class="price">₹250</p>
+            <button class="order-button">Order Now</button>
+        </div>
+        
+        <div class="flower-card">
+            <img src="https://res.cloudinary.com/interflora/f_auto,q_auto,t_pnopt19prodlp/products/p-bouquet-of-white-margaritte-daisies-88739-m.jpg" alt="Daisy">
+            <p class="flower-name">Daisy</p>
+            <p class="stock">In stock: 60</p>
+            <p class="price">₹130</p>
+            <button class="order-button">Order Now</button>
+        </div>
+        <div class="flower-card">
+            <img src="https://blacktulipflowers.in/wp-content/uploads/2022/12/bouquet-of-3peonies-4.png" alt="Peony">
+            <p class="flower-name">Peony</p>
+            <p class="stock">In stock: 45</p>
+            <p class="price">₹270</p>
+            <button class="order-button">Order Now</button>
+        </div>
+        <div class="flower-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMVsDpQAUIZ1jGn6iystFikwXcws6Q2_TDOg&s" alt="Marigold">
+            <p class="flower-name">Marigold</p>
+            <p class="stock">In stock: 80</p>
+            <p class="price">₹140</p>
+            <button class="order-button">Order Now</button>
+        </div>
+        <div class="flower-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNnbaUWVrPkC5C3H_nBHGt7ZI3LI_BPH0eaA&s" alt="Iris">
+            <p class="flower-name">Iris</p>
+            <p class="stock">In stock: 80</p>
+            <p class="price">₹180</p>
+            <button class="order-button">Order Now</button>
+        </div>
+        <div class="flower-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSulX0yo2xnYN6Hn90hqwtdspDOP4i6U8m2kA&s" alt="Dahlia">
+            <p class="flower-name">Dahlia</p>
+            <p class="stock">In stock: 80</p>
+            <p class="price">₹130</p>
+            <button class="order-button">Order Now</button>
+        </div>
+
+    </div>
+</body>
+</html>

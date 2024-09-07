@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company Registration Form</title>
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: Arial, sans-serif;
+background-color: #e9ecef; /* Light gray background color */
+color: #333;
+}
+
+.container {
+max-width: 800px;
+margin: 50px auto;
+padding: 20px;
+background: #f0f8ff; /* Light blue background color for form container */
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+text-align: center;
+margin-bottom: 20px;
+color: #007BFF; /* Blue color for heading */
+}
+h2 {
+margin-top: 20px;
+margin-bottom: 10px;
+color: #0056b3; /* Darker blue for section headers */
+}
+.form-section {
+display: flex;
+flex-wrap: nowrap; /* Prevent wrapping to keep columns side by side */
+justify-content: space-between;
+}
+.form-column {
+flex: 1;
+
+padding: 10px; /* Padding within columns */
+background-color: #ffffff; /* White background for each column */
+border-radius: 5px; /* Rounded corners for columns */
+margin-right: 10px; /* Space between columns */
+}
+.form-column:last-child {
+margin-right: 0; /* Remove right margin from last column */
+}
+label {
+display: block;
+margin: 8px 0 4px; /* Reduced margins for labels */
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+textarea,
+select {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+textarea {
+
+resize: vertical;
+}
+button {
+width: 100%;
+padding: 10px;
+background-color: #28a745; /* Green button color */
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+margin-top: 20px; /* Added space above the button */
+}
+button:hover {
+background-color: #218838; /* Darker green on hover */
+}
+input[type="checkbox"] {
+display: inline-block;
+width: auto;
+}
+input[type="checkbox"] + label {
+display: inline;
+margin-left: 5px;
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+<h1>Company Registration Form</h1>
+<form action="#" method="POST">
+<div class="form-section">
+<div class="form-column">
+<label for="companyName">Company Name:</label>
+<input type="text" id="companyName" name="companyName" required>
+<label for="registrationNumber">Company Registration Number:</label>
+<input type="text" id="registrationNumber" name="registrationNumber" required>
+<label for="taxId">Tax ID:</label>
+<input type="text" id="taxId" name="taxId" required>
+<label for="numberOfEmployees">Number of Employees:</label>
+<input type="number" id="numberOfEmployees" name="numberOfEmployees" min="1"
+required>
+<h2>Business Type</h2>
+<select id="businessType" name="businessType" required>
+<option value="">Select a business type</option>
+<option value="Sole Proprietorship">Sole Proprietorship</option>
+<option value="Partnership">Partnership</option>
+<option value="Corporation">Corporation</option>
+<option value="Limited Liability Company">Limited Liability Company</option>
+</select>
+<label for="businessModel">Business Model:</label>
+<select id="businessModel" name="businessModel" required>
+
+<option value="">Select a business model</option>
+<option value="B2B">Business to Business (B2B)</option>
+<option value="B2C">Business to Consumer (B2C)</option>
+<option value="C2C">Consumer to Consumer (C2C)</option>
+<option value="C2B">Consumer to Business (C2B)</option>
+</select>
+<label for="missionStatement">Mission Statement:</label>
+<textarea id="missionStatement" name="missionStatement" rows="3" required></textarea>
+<h2>Services Offered</h2>
+<input type="checkbox" id="consulting" name="services" value="Consulting">
+<label for="consulting">Consulting</label>
+<input type="checkbox" id="development" name="services" value="Development">
+<label for="development">Development</label>
+<input type="checkbox" id="marketing" name="services" value="Marketing">
+<label for="marketing">Marketing</label>
+<h2>Contact Information</h2>
+<label for="contactPerson">Contact Person Name:</label>
+<input type="text" id="contactPerson" name="contactPerson" required>
+<label for="contactEmail">Contact Person Email:</label>
+<input type="email" id="contactEmail" name="contactEmail" required>
+<label for="contactPhone">Contact Person Phone:</label>
+<input type="tel" id="contactPhone" name="contactPhone" required>
+</div>
+<div class="form-column">
+<h2>Company Details</h2>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+<label for="phone">Phone Number:</label>
+<input type="tel" id="phone" name="phone" required>
+<label for="address">Address:</label>
+<textarea id="address" name="address" rows="4" required></textarea>
+<label for="country">Country:</label>
+<select id="country" name="country" required>
+<option value="">Select a country</option>
+<option value="USA">United States</option>
+<option value="Canada">Canada</option>
+<option value="UK">United Kingdom</option>
+<option value="Australia">Australia</option>
+<option value="Germany">Germany</option>
+<option value="India">India</option>
+<option value="Japan">Japan</option>
+<option value="France">France</option>
+<option value="Italy">Italy</option>
+<option value="Spain">Spain</option>
+<option value="Other">Other</option>
+</select>
+<label for="industry">Industry:</label>
+<select id="industry" name="industry" required>
+<option value="">Select an industry</option>
+<option value="IT">Information Technology</option>
+
+<option value="Finance">Finance</option>
+<option value="Healthcare">Healthcare</option>
+<option value="Retail">Retail</option>
+<option value="Manufacturing">Manufacturing</option>
+</select>
+<label for="established">Established Year:</label>
+<input type="number" id="established" name="established" min="1900" max="2024"
+required>
+<label for="website">Website:</label>
+<input type="url" id="website" name="website">
+<h2>Company Description</h2>
+<label for="description">Description:</label>
+<textarea id="description" name="description" rows="4" required></textarea>
+<h2>Social Media Links</h2>
+<label for="facebook">Facebook:</label>
+<input type="url" id="facebook" name="facebook">
+<label for="twitter">Twitter:</label>
+<input type="url" id="twitter" name="twitter">
+<label for="linkedin">LinkedIn:</label>
+<input type="url" id="linkedin" name="linkedin">
+</div>
+</div>
+<label for="agreement">
+<input type="checkbox" id="agreement" name="agreement" required>
+I agree to the terms and conditions
+</label>
+
+<button type="submit">Register</button>
+</form>
+</div>
+</body>
+</html>

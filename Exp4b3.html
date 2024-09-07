@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Occurrences</title>
+    <style>
+        /* Optional styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #arrayDisplay {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p id="arrayDisplay">Array: ['a', 'b', 'a', 'c', 'z']</p>
+    <input type="text" id="charInput" placeholder="Enter character">
+    <button id="checkOccurrencesButton">Check Occurrences</button>
+    <p id="occurrences"></p>
+
+    <script>
+        // Array of characters
+        var arr = ['a', 'b', 'a', 'c', 'z'];
+
+        // Function to count occurrences of a specific character
+        function countOccurrences() {
+            var char = document.getElementById('charInput').value;
+            if (char.length !== 1) {
+                alert("Please enter a single character.");
+                return;
+            }
+            var count = arr.filter(item => item === char).length;
+            document.getElementById('occurrences').textContent = "Occurrences of '" + char + "' is " + count;
+        }
+
+        // Function to display the array
+        function displayArray() {
+            document.getElementById('arrayDisplay').textContent = "Array: " + JSON.stringify(arr);
+        }
+
+        // Event listener for button
+        document.getElementById('checkOccurrencesButton').addEventListener('click', countOccurrences);
+
+        // Display the array on page load
+        displayArray();
+    </script>
+</body>
+</html>

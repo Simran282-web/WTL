@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+</head>
+<body>
+    <ul id="colorList"></ul>
+
+    <script>
+        var colors = ["red", "blue", "green", "yellow", "pink"];
+        var list = document.getElementById("colorList");
+
+        colors.forEach(function(color) {
+            var listItem = document.createElement("li");
+            listItem.textContent = color;
+            listItem.onclick = function() {
+                document.body.style.backgroundColor = color;
+            };
+            list.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>

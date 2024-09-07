@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Modification</title>
+</head>
+
+<body>
+    <input type="text" id="colorInput" placeholder="Enter a color">
+    <button id="addColorButton">Add Color</button>
+    <p id="colorList"></p>
+
+    <script>
+        // Initial array of colors
+        var colors = ["Red", "Green", "Blue"];
+
+        // Function to update the color list display
+        function updateColorList() {
+            document.getElementById('colorList').textContent = "Colors: " + colors.join(", ");
+        }
+
+        // Function to add color if not already present
+        function addColor() {
+            var colorInput = document.getElementById('colorInput').value.trim(); // Trim whitespace
+            if (colorInput && !colors.includes(colorInput)) {
+                colors.push(colorInput);
+                updateColorList();
+            } else if (colors.includes(colorInput)) {
+                alert("Color already exists in the array.");
+            }
+            document.getElementById('colorInput').value = ''; // Clear input field
+        }
+
+        // Event listener for button
+        document.getElementById('addColorButton').addEventListener('click', addColor);
+
+        // Initial display
+        updateColorList();
+    </script>
+</body>
+
+</html>

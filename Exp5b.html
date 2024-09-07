@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchor Tag Example</title>
+</head>
+<body>
+    <div id="linkContainer"></div>
+    <button onclick="addAnchor()">Add Link</button>
+
+    <script>
+        function addAnchor() {
+            var container = document.getElementById("linkContainer");
+            var anchor = document.createElement("a");
+            anchor.href = "https://www.youtube.com/"; // URL to redirect
+            anchor.textContent = "Go to Youtube.com";
+            anchor.target = "_blank"; // Open in a new tab
+            container.appendChild(anchor);
+        }
+    </script>
+</body>
+</html>
